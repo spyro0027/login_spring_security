@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<h1>Categorias</h1>
+<h3><a th:href="@{/admin}">Administrador</a></h3>
+<h3><a th:href="@{/user}">Usuario</a></h3>
+<h3><a th:href="@{/AdminProducts}">Listado de productos para Administradores</a></h3>
+<h3><a th:href="@{/Userproducts}">Listado de productos para usuarios</a></h3>
+<form th:action="@{/logout}" method="post">
+<input type="submit" value="cerrar sesion"/>
+</form>
+</body>
+</html>

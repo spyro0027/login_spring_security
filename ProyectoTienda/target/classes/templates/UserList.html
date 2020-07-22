@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-4">
+
+	<table class="table">
+	
+	<thead>
+		<tr>
+			<th>IdUsuarios</th>
+			<th>Nombres</th>
+			<th>Apellidos</th>
+			<th>Usuario </th>
+	        <th>Contraseña </th>
+			<th>Foto </th>
+			<th>Correo </th>
+			<th>Fecha de creacion </th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+	
+	
+	<tbody>
+	
+		<tr th:each="usuario:${usuarios}">
+			<td th:text="${usuario.IdUsuario}"></td>
+			<td th:text="${usuario.nombres}"></td>
+			<td th:text="${usuario.apellidos}"/>
+			<td th:text="${usuario.username}"></td>
+			<td th:text="${usuario.Foto}"></td>
+			<td th:text="${usuario.Correo}"></td>
+			<td th:text="${usuario.FechaCreacion}"></td>
+		</tr>
+	
+	</tbody>
+	
+	
+	</table>
+		
+</div>
